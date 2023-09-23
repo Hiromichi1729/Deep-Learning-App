@@ -2,7 +2,7 @@
 name = "deep-learning-app"
 version = "0.1.0"
 description = ""
-authors = ["Hiromichi1729"]
+authors = ["Hiromichi1729 <hiromichi_1729@yahoo.co.jp>"]
 readme = "README.md"
 packages = [{include = "deep_learning_app"}]
 
@@ -12,7 +12,6 @@ fastapi = "^0.103.1"
 uvicorn = "^0.23.2"
 requests = "^2.31.0"
 python-dotenv = "^1.0.0"
-gunicorn = "^21.2.0"
 
 
 [build-system]

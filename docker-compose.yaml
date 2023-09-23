@@ -1,0 +1,14 @@
+version: "3.0"
+
+services:
+  python38:
+    build:
+      context: ./
+      dockerfile: "./docker/python/Dockerfile"
+    container_name: "deep-learning-app_python38"
+    working_dir: /var/www/project
+    volumes:
+      - ./src:/var/www/project/src
+    ports:
+      - 6030:6030
+    env_file: ./.env
