@@ -12,4 +12,4 @@ RUN poetry install --no-root
 
 COPY ./src /var/www/project/src
 
-CMD ["poetry", "run", "uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "6030"]
+CMD ["poetry", "run", "uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "6030", "--reload"]
