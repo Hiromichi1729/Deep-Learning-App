@@ -9,8 +9,17 @@ app = FastAPI(docs_url="/docs")
 mathHandler = MathHandler()
 
 @app.post('/math/functions')
-def mathIndex(
+def mathFunctions(
         funtionName :str,
         parameters :Union[float,List[float]]
     ):
     return mathHandler.functions(funtionName,parameters)
+
+@app.post('/math/matrix')
+def mathMatrix(
+       matrix1: Union[List[List[int]],List[int]],
+       matrix2: Union[List[List[int]],List[int]]
+    ):
+    
+    return mathHandler.matrix(matrix1,matrix2)
+    
