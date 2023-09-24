@@ -47,6 +47,10 @@ class FunctionsUseCase:
         self,
         parameters
     ) -> Union[float,List[float]]:
-        exp = np.exp(np.array(parameters))
+        npArray = np.array(parameters)
+        maxParameter = np.max(npArray)
+
+        exp = np.exp(npArray-maxParameter)
         sumExp = np.sum(exp)
+
         return (exp/sumExp).tolist()
