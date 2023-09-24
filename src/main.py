@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from typing import Union,List
+from typing import Union, List, Callable
 from pydantic import BaseModel
 
 from MathHandler import MathHandler
@@ -20,6 +20,12 @@ def mathMatrix(
        matrix1: Union[List[List[int]],List[int]],
        matrix2: Union[List[List[int]],List[int]]
     ):
-    
     return mathHandler.matrix(matrix1,matrix2)
+
+@app.post('math/differential')
+def mathDifferential(
+        function,
+        a :float
+    ):
+    return mathHandler.differential(function,a)
     

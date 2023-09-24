@@ -1,10 +1,12 @@
-from typing import Union,List
+from typing import Union, List, Callable
 
 from Math.FunctionsUseCase import FunctionsUseCase
 from Math.MatrixUseCase import MatrixUseCase
+from Math.DifferentialUseCase import DifferentialUseCase
 
 functionsUseCase = FunctionsUseCase()
 matrixUseCase = MatrixUseCase()
+differentialUseCase = DifferentialUseCase()
 
 class MathHandler:
     
@@ -24,3 +26,9 @@ class MathHandler:
         matrix2 :Union[List[List[int]],List[int]]
     ):
         return matrixUseCase.execute(matrix1,matrix2)
+    
+    def differential(
+        function,
+        a :float
+    ):
+        return differentialUseCase.execute(function, a)
